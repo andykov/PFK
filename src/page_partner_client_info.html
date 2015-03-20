@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о клиенте</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header header--home">
+			<div class="header__logo">
+				<img src="img/pfk_logo.png" alt="">
+			</div>
+			<div class="header__buttons">
+				<a href="#" class="btn btn--red">Выход</a>
+			</div>
+			<h1 class="header__title">Рабочий кабинет партнера</h1>
+		</div>
+		<div class="content">
+			<div class="content__nav">
+				<a href="#" class="btn">Сотрудники</a>
+				<a href="#" class="btn">Брокеры</a>
+				<a href="#" class="btn">Клиенты</a>
+				<a href="#" class="btn">Заявки</a>
+			</div>
+			<h2 class="content__title">Шило Евгения Петровна</h2>
+			<div class="client-info">
+				<h3>Список заявок клиента</h3>
+				<div class="table">
+					<table>
+						<thead>
+							<tr>
+								<td width="90">Номер</td>
+								<td width="145">Дата</td>
+								<td width="480">Статус</td>
+								<td width="245">Предложения</td>
+								<td width="230">Менеджер</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>12414</td>
+								<td>12.01.2015</td>
+								<td><span class="yes-reply">Есть ответ</span></td>
+								<td>0/0</td>
+								<td>Константинопольский К.К.</td>
+							</tr>
+							<tr>
+								<td>12414</td>
+								<td>12.01.2015</td>
+								<td><span class="no-reply">Нет ответа</span></td>
+								<td>5/25</td>
+								<td>Лучший М.Н.</td>
+							</tr>
+							<tr>
+								<td>12414</td>
+								<td>12.01.2015</td>
+								<td><span class="yes-reply">Есть ответ</span></td>
+								<td>10/30</td>
+								<td>Кредит Л.В.</td>
+							</tr>
+							<tr>
+								<td>12414</td>
+								<td>12.01.2015</td>
+								<td><span class="yes-reply">Есть ответ</span></td>
+								<td>0/0</td>
+								<td>Иванов И.И.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<ul class="pagination">
+				<li class="previous disabled"><a class="previous disabled"><span>&lt;</span></a></li>
+				<li class="active"><a class="active">1</a></li>
+				<li><a rel="next" href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li class="disabled"><a>...</a></li>
+				<li><a href="#">10</a></li>
+				<li class="next"><a class="next" rel="next" href="#"><span>&gt;</span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

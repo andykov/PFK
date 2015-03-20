@@ -1,0 +1,19 @@
+{
+  "name": "gulp-front+bower",
+  "version": "1.0.0",
+  "authors": [
+    "Andrey Budnikov <andykov.work@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}

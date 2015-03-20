@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Просмотр и редактирование брокера</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header header--home">
+			<div class="header__logo">
+				<img src="img/pfk_logo.png" alt="">
+			</div>
+			<div class="header__buttons">
+				<a href="#" class="btn btn--red">Выход</a>
+			</div>
+			<h1 class="header__title">Рабочий кабинет партнера</h1>
+		</div>
+		<div class="content">
+			<div class="content__nav">
+				<a href="#" class="btn">Сотрудники</a>
+				<a href="#" class="btn">Брокеры</a>
+				<a href="#" class="btn">Клиенты</a>
+				<a href="#" class="btn">Заявки</a>
+			</div>
+			<h2 class="content__title">Просмотр и редактирование брокера</h2>
+			<div class="edit-coworker">
+				<form class="form" action="">
+					<div class="form__row">
+						<label>Название организации</label>
+						<input type="text" name="name-org">
+					</div>
+					<div class="form__row">
+						<label>ФИО</label>
+						<input type="text" name="name">
+					</div>
+					<div class="form__row">
+						<label>Контактное лицо</label>
+						<input type="text" name="persone">
+					</div>
+					<!-- <div class="form__row"> -->
+						<div class="radio-group">
+							<label class="radio"><input type="radio">Менеджер активен - пользователь может пользоваться системой</label>
+							<label class="radio"><input type="radio">Менеджер заблокирован - пользователь не может пользоваться системой</label>
+						</div>
+					<!-- </div> -->
+					<div class="form__action">
+						<input type="submit" class="btn btn--white" value="Сохранить">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>index.html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header header--home">
+			<div class="header__logo">
+				<img src="img/pfk_logo.png" alt="">
+			</div>
+			<div class="header__buttons">
+				<a href="#" class="btn btn--yellow">Новая заявка</a>
+				<a href="#" class="btn btn--notice"><span class="counter-notice">3</span>Уведомления</a>
+				<a href="#" class="btn btn--red">Выход</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="request">
+				<div class="request__title">
+					<h2>Заявка № 12341</h2>
+					<span class="manager">Менеджер Константинопольски К. К.</span>			
+				</div>
+				<div class="request__action clr">
+					<form class="form" action="">
+						<div class="select select--status">
+							<a href="javascript:void(0);" class="select__trigger ico-select">Изменить статус</a>
+							<ul class="select__drop">
+								<li><a href="#">Прием предложений прекращен</a></li>
+								<li><a href="#">Успешно закрыта</a></li>
+								<li><a href="#">Откланена</a></li>
+							</ul>
+							<input type="hidden" id="select" />
+						</div>
+						<input class="btn btn--white" type="submit" value="Сохранить">
+					</form>
+					<div class="download-pdf clr">
+						<span>Заявка в формате PDF сформирована</span> <a href="#" class="btn btn--white ico-pdf">Скачать PDF</a>
+					</div>
+				</div>
+				<div class="request__text">
+					<a class="spoiler-trigger" href="#">Подробный текст заявки</a>
+					<div class="spoiler-body">
+						<p>Вы можете заполнить он-лайн заявку на получение кредита прямо сейчас. Заявка поступит на рассмотрение специалистам по кредитованию, в течении двух ближайших рабочих дней они свяжутся с Вами для обсуждения условий кредита, а также проконсультируют по процедуре его оформления.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="full-width">
+		<div class="container">
+			<span class="text-notice">Прием заявок открыт - ждем предложений от брокеров</span>
+		</div>
+	</div>
+	<div class="container">
+		<div class="reply">
+			<div class="reply__filter">
+				<span>Предложения по заявке, ответов 10 из 25:</span> <a href="#" class="current">Все</a> <a href="#">Есть ответ</a> <a href="#">Нет ответа</a>
+			</div>
+			<div class="table">
+				<table>
+					<thead>
+						<tr>
+							<td width="430">Отправитель</td>
+							<td width="480">Статус</td>
+							<td width="260">Действия</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ВТБ 24</td>
+							<td><span class="yes-reply"></span>Есть ответ</td>
+							<td><a href="#" class="ico-view">Смотреть</a><a href="#" class="ico-reject">Отвергнуть</a></td>
+						</tr>
+						<tr>
+							<td>Алдан Золото Банк</td>
+							<td><span class="no-reply"></span>Нет ответа</td>
+							<td>
+							<a href="#" class="ico-view">Смотреть</a><a href="#" class="ico-reject">Отвергнуть</a></td>
+						</tr>
+						<tr>
+							<td>Сберегательный Банк Российской Федерации</td>
+							<td><span class="yes-reply"></span>Есть ответ</td>
+							<td><a href="#" class="ico-view">Смотреть</a><a href="#" class="ico-reject">Отвергнуть</a></td>
+						</tr>
+						<tr>
+							<td>Альфа Банк</td>
+							<td><span class="yes-reply"></span>Есть ответ</td>
+							<td><a href="#" class="ico-view">Смотреть</a><a href="#" class="ico-reject">Отвергнуть</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Администратор - добавить партнера</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header header--home">
+			<div class="header__logo">
+				<img src="img/pfk_logo.png" alt="">
+			</div>
+			<div class="header__buttons">
+				<a href="#" class="btn btn--red">Выход</a>
+			</div>
+			<h1 class="header__title">Рабочий кабинет администратора</h1>
+		</div>
+		<div class="content">
+			<h2 class="content__title content__title--inline">Добавить партнера</h2>
+			<a href="#" class="link-list-partner">Список партнеров</a>
+			<div class="add-partner">
+				<form class="form" action="">
+					<div class="form__row">
+						<label>E-mail</label>
+						<input type="text" name="email">
+					</div>
+					<div class="form__row">
+						<label>Название организации</label>
+						<input type="text" name="name-org">
+					</div>
+					<div class="form__row">
+						<label>Контактное лицо (ФИО)</label>
+						<input type="text" name="person">
+					</div>
+					<div class="form__action">
+						<div class="load">Загруить логотип (jpeg или png, минимум 70*70 px)</div>
+						<input type="submit" class="btn btn--white" value="Добавить">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

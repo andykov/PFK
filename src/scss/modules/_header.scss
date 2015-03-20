@@ -1,0 +1,44 @@
+.header {
+	padding-top: 55px;
+	overflow: hidden;
+	margin-bottom: 32px;
+	&__title {
+		float: left;
+		line-height: 30px;
+		padding-top: 10px;
+		margin-left: 46px;
+	}
+	&--home {
+		h2 {
+			font-family: 'exo2medium';
+			font-weight: normal;
+			font-size: 20px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			float: right;
+			color: #3e3e3e;
+			margin-top: 15px;
+		}
+	}
+	&__logo {
+		float: left;
+	}
+	&__buttons {
+		float: right;
+		.btn {
+			margin-left: 32px;
+			&--notice {
+				position: relative;
+				padding-left: 70px;
+				padding-right: 70px;
+				.counter-notice {
+					position: absolute;
+					right: -15px;
+					top: -15px;
+				}
+			}
+		}
+
+	}
+}
+
