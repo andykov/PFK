@@ -26,27 +26,26 @@
 			</div>
 			<h2 class="content__title">Просмотр и редактирование сотрудника</h2>
 			<div class="edit-coworker">
-				<form class="form" action="">
-					<div class="form__row">
+				<form class="form" action="#" method="POST">
+					<div class="form-group form__row">
 						<label>E-mail</label>
-						<input type="text" name="email">
+						<input type="email" name="email" value="vasya@gmail.com">
 					</div>
-					<div class="form__row">
+					<div class="form-group form__row">
 						<label>ФИО</label>
-						<input type="text" name="name">
+						<input type="text" name="person" value="Иванов Василий Сергеевич">
 					</div>
-					<div class="form__row">
+					<div class="form-group form__row">
 						<label>Новый пароль</label>
-						<input type="text" name="pass">
+						<input type="password" name="password" value="1234">
 					</div>
-					<div class="form__row">
+					<div class="form-group form__row">
 						<label>Новый пароль еще раз</label>
-						<input type="text" name="pass-again">
+						<input type="password" name="confirmpassword" value="1234">
 					</div>
-					<div class="radio-group">
-						<label class="radio"><input type="radio" name="radio1">Банки</label>
-						<label class="radio"><input type="radio" name="radio2">Страховые компании</label>
-						<label class="radio"><input type="radio" name="radio3">Микрокредитные организации</label>
+					<div class="form-group radio-group">
+						<label class="radio"><input type="radio">Менеджер активен - пользователь может пользоваться системой</label>
+						<label class="radio active"><input type="radio" checked>Менеджер заблокирован - пользователь не может пользоваться системой</label>
 					</div>
 					<div class="form__action">
 						<input type="submit" class="btn btn--white" value="Сохранить">
@@ -57,6 +56,7 @@
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

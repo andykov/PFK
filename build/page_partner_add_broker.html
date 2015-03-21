@@ -5,6 +5,7 @@
     <title>Добавить брокера</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 	<div class="container">
@@ -26,16 +27,16 @@
 			</div>
 			<h2 class="content__title">Добавить брокера</h2>
 			<div class="add-broker">
-				<form class="form" action="">
-					<div class="form__row">
+				<form class="form" action="#" method="POST">
+					<div class="form-group form__row">
 						<label>Название организации</label>
-						<input type="text" name="name-org">
+						<input type="text" name="name.org">
 					</div>
-					<div class="form__row">
-						<label>E-mail</label>
-						<input type="text" name="email">
+					<div class="form-group form__row">
+						<label>Email address</label>
+						<input type="email" name="email">
 					</div>
-					<div class="form__row">
+					<div class="form-group form__row">
 						<label>Контактное лицо (ФИО)</label>
 						<input type="text" name="person">
 					</div>
@@ -51,8 +52,9 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

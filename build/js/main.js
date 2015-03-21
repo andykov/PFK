@@ -1,63 +1,10 @@
 $(function() {
-	
-	var app = {
-		 
-		initialize : function () {          
-			this.modules();
-			this.setUpListeners();
-		},
- 
-		modules: function () {
- 
-		},
- 
-		setUpListeners: function () {
-			$('form').on('submit', app.submitForm);
-			$('form').on('keydown', 'label, input', app.removeError);
-		},
- 
-		submitForm: function (e) {
-			e.preventDefault();
 
-			var form = $(this),  // Текущая форма
-				submitBtn = form.find('input[type="submit"]'); // кнопка submit текущей формы
-			console.log(submitBtn);
-			// если форма не валидна, вернуть false
-			if (app.validateForm(form) === false) return false;
-
-			submitBtn.prop('disabled', 'disabled');
-		},
-
-		validateForm: function (form) {
-			var inputs = form.find('input:not([type="submit"])') // выбираем инпуты
-				valid = true; // типо по умолчанию форма валидна
-
-			$.each(inputs, function(index, val) {
-				var input = $(val),
-					val = input.val(),
-					formGroup = input.parents('.form-group'),
-					label = formGroup.find('label');
-
-				if (val.length === 0) { // если юзер ничего не ввел
-					input.wrap('<div class="field_with_errors"></div>');
-					label.wrap('<div class="field_with_errors"></div>');
-					valid = false;
-				} else {
-					input.removeClass('field_with_errors');
-					label.removeClass('field_with_errors');
-				}
-			});
-				// валидный или не валидный
-				return valid;
-		},
-
-		removeError: function () {
-			$(this).parent().removeClass('field_with_errors');
-		}
-		 
-	}
- 
-	app.initialize();
+	$('.big-field').find('input').on('focus',function(){
+		$('.big-field').removeClass('focus');
+		$(this).parent('.big-field').addClass('focus');
+		return false;
+	});
 
 	// Select
 	$('.select__trigger').click(function(){
@@ -122,24 +69,57 @@ $(function() {
 			elRadioLabel.removeClass('active');
 			elRadioInput.removeAttr('checked')
 			$(this).addClass('active').find('input').attr('checked','checked' );
-			// alert('1');
 		}
-		// $(this).addClass('active').find('input').prop('checked',true);
 	});
 
-// // RadioButton
-// $('.radio').each(function(){
-// 	$(this).on('click', function(){
-// 		// Заносим текст из нажатого дива в переменную
-// 		var valueRadio = $(this).html();
-// 		// Находим любой активный переключатель и убираем активность
-// 		$(this).parent().find('.radio').removeClass('active');
-// 		// Нажатому диву добавляем активность
-// 		$(this).addClass('active');
-// 		// Заносим значение объявленной переменной в атрибут скрытого инпута
-// 		$(this).parent().find('input').val(valueRadio);
-// 	});
-// });
+
+	// VALIDATION
+		var validator = $('form').bootstrapValidator({
+			fields: {
+				'email.login': {
+					validators: {
+						notEmpty: {
+							message: "Пожалуйста, введите email",
+						},
+						emailAddress: {
+							message: "Некорректный email адрес"
+						}
+					}
+				},
+				email: {
+					validators: {
+						emailAddress: {
+							message: "Некорректный email адрес"
+						}
+					}
+				},
+				person: {
+					validators: {
+						notEmpty: {
+							message: "Пожалуйста, введите ФИО"
+						}
+					}
+				},
+				password: {
+					validators: {
+						notEmpty: {
+							message: "Пожалуйста, введите пароль"
+						}
+					}
+				},
+				confirmpassword: {
+					validators: {
+						notEmpty: {
+							message: "Повторите пароль"
+						},
+						identical: {
+							field: "password",
+							message: "Пароли не совпадают"
+						}
+					}
+				}
+			}
+		});
 
 
 }); // end jquery

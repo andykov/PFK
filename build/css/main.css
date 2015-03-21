@@ -403,18 +403,18 @@ h3 {
   margin-bottom: 20px; }
 
 ::-webkit-input-placeholder {
-  color: #b4b4b4; }
+  color: #B4B4B4; }
 
 ::-moz-placeholder {
-  color: #b4b4b4; }
+  color: #B4B4B4; }
 
 :-ms-input-placeholder {
-  color: #b4b4b4; }
+  color: #B4B4B4; }
 
 :-moz-placeholder {
-  color: #b4b4b4; }
+  color: #B4B4B4; }
 
-input[type="text"], textarea {
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], textarea {
   color: #2f2f2f;
   border: 1px solid #ccc;
   padding: 9px 15px;
@@ -425,6 +425,7 @@ input[type="text"], textarea {
 input, textarea {
   font-family: 'PTSansRegular';
   border-radius: 4px;
+  outline: none;
   box-sizing: border-box; }
   input:focus, textarea:focus {
     border-color: #4775b3;
@@ -433,6 +434,39 @@ input, textarea {
 textarea {
   resize: none;
   overflow: hidden; }
+
+/*** [STYLE FILE UPLOAD] ***/
+.fileupload {
+  margin-bottom: 20px; }
+  .fileupload__button {
+    position: relative;
+    color: #4775b3;
+    cursor: pointer;
+    display: inline-block;
+    cursor: pointer; }
+    .fileupload__button input[type=file] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      z-index: -1; }
+    .fileupload__button:hover {
+      color: #2f2f2f; }
+  .fileupload__items {
+    margin-bottom: 23px; }
+  .fileupload .file-item {
+    margin-right: 15px; }
+  .fileupload .file-remove {
+    background: url(../img/layout/sprite.png) no-repeat right top;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer; }
 
 .clr:after {
   content: '';
@@ -522,6 +556,9 @@ textarea {
     background-position: 0 -135px; }
 
 /*** [LOAD FILE] ***/
+.upload-file {
+  margin-bottom: 27px; }
+
 /*.load-file {
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05); 
 	border-radius: 2px;  
@@ -589,16 +626,24 @@ textarea {
       border: 1px solid #4775b3;
       box-shadow: 0 1px 2px 0 #4775b3; }
   .btn.ico-pdf {
-    position: relative;
     padding-left: 58px; }
     .btn.ico-pdf:before {
-      content: '';
-      background: url(../img/layout/sprite.png) no-repeat 0 -333px;
-      width: 33px;
-      height: 39px;
-      position: absolute;
       left: 16px;
-      top: -10px; }
+      top: -10px;
+      margin: 0; }
+
+.ico-pdf {
+  position: relative;
+  padding-left: 45px; }
+  .ico-pdf:before {
+    content: '';
+    background: url(../img/layout/sprite.png) no-repeat 0 -333px;
+    width: 33px;
+    height: 39px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -19px; }
 
 .ico-view:before {
   content: '';
@@ -772,54 +817,81 @@ table {
           right: -15px;
           top: -15px; }
 
+.form .big-field {
+  border-bottom: 2px solid #ccc; }
+  .form .big-field label {
+    display: inline-block;
+    font-family: 'exo2bold';
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 7px; }
+  .form .big-field input {
+    width: 100%;
+    font-family: 'exo2extra_light';
+    font-size: 35px;
+    width: 100%;
+    height: 60px;
+    line-height: 35px;
+    border: 0;
+    outline: none;
+    color: #3e3e3e;
+    border-radius: 0;
+    background-color: transparent;
+    padding-left: 0;
+    margin: 0; }
+    .form .big-field input[type="password"] {
+      font-family: Arial;
+      font-size: 68px;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      height: 50px;
+      vertical-align: top;
+      margin-bottom: 10px;
+      line-height: normal; }
+.form .has-error {
+  position: relative; }
+  .form .has-error input {
+    border-color: #EE4A58; }
+  .form .has-error .help-block {
+    color: #EE4A58;
+    position: absolute;
+    margin: 10px 0 0 20px; }
+.form__remember {
+  float: left; }
+
 /*** [FORM AUTORIZATION] ***/
 .form-auth {
   width: 600px;
   margin: 0 auto;
   padding-top: 52px; }
   .form-auth .form__row {
-    padding-top: 10px;
-    margin-bottom: 35px; }
+    margin-bottom: 7px;
+    margin-bottom: 42px; }
   .form-auth__action {
     text-align: right; }
   .form-auth .form__remember {
-    margin-top: 14px; }
+    margin-top: 14px;
+    font-family: 'exo2regular'; }
   .form-auth .btn {
     float: right; }
 
-.form .big-field label {
-  display: inline-block;
-  font-family: 'exo2bold';
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #555;
-  margin-bottom: 7px; }
-.form .big-field input {
-  font-family: 'exo2extra_light';
-  font-size: 35px;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  border: 0;
-  outline: none;
-  color: #3e3e3e;
-  border-bottom: 2px solid #ccc;
-  border-radius: 0;
-  background-color: transparent;
-  padding-left: 0; }
-  .form .big-field input[type="password"] {
-    font-family: Arial;
-    font-size: 68px; }
-  .form .big-field input:focus {
-    border-color: #4775b3; }
-.form .field_with_errors label {
-  color: red; }
-.form .field_with_errors input {
-  border: 1px solid red; }
-
-.form__remember {
-  float: left; }
+.big-field.focus {
+  border-color: #4775b3; }
+.big-field.has-error {
+  border-color: #EE4A58; }
+  .big-field.has-error .help-block {
+    margin: 10px 0 0 0; }
+  .big-field.has-error input::-webkit-input-placeholder {
+    color: #EE4A58; }
+  .big-field.has-error input::-moz-placeholder {
+    color: #EE4A58; }
+  .big-field.has-error input:-ms-input-placeholder {
+    color: #EE4A58; }
+  .big-field.has-error input:-moz-placeholder {
+    color: #EE4A58; }
 
 .user-pass {
   font-size: 70px;
@@ -909,8 +981,12 @@ table {
   .send-offer .form {
     padding-top: 42px; }
   .send-offer .button {
-    text-align: right;
-    padding-top: 20px; }
+    padding-top: 20px;
+    overflow: hidden; }
+    .send-offer .button .error-text {
+      float: left; }
+    .send-offer .button .btn {
+      float: right; }
 
 /*** [PAGES BANK CREDIT] ***/
 .bank-credit {
@@ -968,7 +1044,8 @@ table {
 
 .send-any {
   float: right;
-  max-width: 440px; }
+  max-width: 440px;
+  width: 100%; }
   .send-any .download-pdf {
     padding: 6px 0 32px; }
     .send-any .download-pdf span {
@@ -1000,7 +1077,8 @@ table {
 .add-offer textarea {
   max-width: 840px;
   width: 100%;
-  height: 200px; }
+  height: 200px;
+  margin-bottom: 18px; }
 
 /*** [PAGE ADMINISTRATOR] ***/
 .list-partner {
@@ -1040,10 +1118,6 @@ table {
 .add-coworker .form__action {
   padding-left: 70px; }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .container {
-    padding: 0 25px; } }
-
 @media only screen and (max-device-width: 768px) {
   .header__title {
     clear: both;
@@ -1061,9 +1135,17 @@ table {
     float: none; }
   .request__action .download-pdf {
     text-align: right;
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  .form .has-error .help-block {
+    color: #EE4A58;
+    position: absolute;
+    margin: 0;
+    display: block;
+    bottom: 7px; } }
 
 @media only screen and (max-device-width: 1024px) {
+  .container {
+    padding: 0 25px; }
   .clients-list thead td:last-child, .broker-list thead td:last-child {
     width: 180px; }
   .list-partner thead td:last-child {

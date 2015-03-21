@@ -14,11 +14,11 @@
 			</div>
 		</div>
 		<div class="send-offer">
-			<h2>Отправка предложения по заявке</h2>
-			<form class="form" action="">
-				<div class="form__row big-field">
+			<h2>Отправка предложения по заявке "Страхование жизни, № 123456"</h2>
+			<form class="form" action="#" method="POST">
+				<div class="form-group form__row big-field">
 					<label>Код</label>
-					<input class="big-field" type="text" placeholder="Введите код из письма с заявкой">
+					<input type="text" name="code" placeholder="Введите код из письма с заявкой">
 				</div>
 				<div class="button">
 					<input class="btn btn--large" type="submit" value="Продолжить">
@@ -27,8 +27,8 @@
 		</div>
 	</div>
 
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

@@ -23,9 +23,8 @@
 			<div class="bank-credit bank-credit--send">
 				<div class="bank-select">
 					<h3>Банки для отправки</h3>
-					<form class="form" action="">
+					<form class="form" action="#" method="POST">
 						<label id="selectAll" class="select-all">Выбрать все<input type="checkbox"></label>
-						<div id="checkGroup">
 							<div class="bank">
 								<label class="checkbox">
 									<input type="checkbox" name="vnb">
@@ -106,7 +105,6 @@
 									<span>Москва, 8-800-555-20-00</span>
 								</div>
 							</div>
-						</div>
 						<input class="btn btn--white" type="submit" value="Отправить в выбранные">
 					</form>
 				</div>
@@ -115,32 +113,29 @@
 					<div class="download-pdf clr">
 						<span>Заявка в формате PDF сформирована</span> <a href="#" class="btn btn--white ico-pdf">Скачать PDF</a>
 					</div>
-					<form class="form">
-						<div class="form-group">
+					<form class="form" action="#" method="POST">
+						<div class="form-group form__row">
 							<input type="text" name="address" placeholder="Адрес получателя">
 						</div>
-						<div class="form-group">
+						<div class="form-group form__row">
 							<input type="text" name="title" placeholder="Например:Заявка на Банковский кредит №12345">
 						</div>
-						<div class="form-group">
-							<textarea name="message" placeholder="Текст заявки"></textarea>
+						<div class="form-group form__row">
+							<textarea name="text" placeholder="Текст заявки"></textarea>
 						</div>
-							<!--<label class="load-file">
-								<div class="load-file__button" >Выбрать</div>
-								<div class='load-file__input'>Выберите файл</div>
-								<input type="file" onchange="this.previousSibling.previousSibling.innerHTML = this.value"/>
-							</label> -->
+						<div class="fileupload">
+							<!-- <span class="ico-pdf"></span> -->
+							<label class="fileupload__button ico-pdf">+ Добавить файл <input type="file" /></label>
+						</div>
 						<input type="submit" class="btn btn--white">
 					</form>
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
 	<script src="js/main.js"></script>
-
 </body>
 </html>

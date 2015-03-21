@@ -21,21 +21,23 @@
 			<h2 class="content__title content__title--inline">Добавить партнера</h2>
 			<a href="#" class="link-list-partner">Список партнеров</a>
 			<div class="add-partner">
-				<form class="form" action="">
-					<div class="form__row">
+				<form class="form" action="#" method="POST">
+					<div class="form-group form__row">
 						<label>E-mail</label>
-						<input type="text" name="email">
+						<input type="email" name="email">
 					</div>
-					<div class="form__row">
+					<div class="form-group form__row">
 						<label>Название организации</label>
-						<input type="text" name="name-org">
+						<input type="text" name="name.org">
 					</div>
-					<div class="form__row">
+					<div class="form-group form__row">
 						<label>Контактное лицо (ФИО)</label>
 						<input type="text" name="person">
 					</div>
 					<div class="form__action">
-						<div class="load">Загруить логотип (jpeg или png, минимум 70*70 px)</div>
+						<div class="fileupload">
+							<label class="fileupload__button">Загруить логотип (jpeg или png, минимум 70*70 px)<input type="file" /></label>
+						</div>
 						<input type="submit" class="btn btn--white" value="Добавить">
 					</div>
 				</form>
@@ -43,9 +45,8 @@
 		</div>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
 	<script src="js/main.js"></script>
-
 </body>
 </html>

@@ -1,24 +1,6 @@
-/*** [FORM AUTORIZATION] ***/
-.form-auth {
-	width: 600px;
-	margin: 0 auto;
-	padding-top: 52px;
-	.form__row {
-		padding-top: 10px;
-		margin-bottom: 35px;
-	}
-	&__action {
-		text-align: right;
-	}
-	.form__remember {
-		margin-top: 14px;
-	}
-	.btn {
-		float: right;
-	}
-}
 .form {
 	.big-field {
+		border-bottom: 2px solid #ccc;
 		label {
 			display: inline-block;
 			font-family: 'exo2bold';
@@ -29,38 +11,83 @@
 			margin-bottom: 7px;
 		}
 		input {
+			width: 100%;
 			font-family: 'exo2extra_light';
 			font-size: 35px;
 			width: 100%;
 			height: 60px;
-			line-height: 60px;
+			line-height: 35px;
 			border: 0;
 			outline: none;
 			color: #3e3e3e;
-			border-bottom: 2px solid #ccc;
 			border-radius: 0;
 			background-color: transparent;
 			padding-left: 0;
+			margin: 0;
 			&[type="password"] {
 				font-family: Arial;
 				font-size: 68px;
-			}
-			&:focus {
-				border-color: #4775b3;
+				margin: 0;
+				padding: 0;
+				text-transform: uppercase;
+				height: 50px;
+				vertical-align: top;
+				margin-bottom: 10px;
+				line-height: normal;
 			}
 		}
 	}
-	.field_with_errors {
-		label {
-			color: red;
-		}
+	.has-error {
+		position: relative;
 		input {
-			border: 1px solid red;
+			border-color: #EE4A58;
 		}
+		.help-block {
+			color: #EE4A58;
+			position: absolute;
+			margin: 10px 0 0 20px;
+		}
+	}
+	&__remember {
+		float: left;
 	}
 }
-.form__remember {
-	float: left;
+/*** [FORM AUTORIZATION] ***/
+.form-auth {
+	width: 600px;
+	margin: 0 auto;
+	padding-top: 52px;
+	.form__row {
+		margin-bottom: 7px;
+		margin-bottom: 42px;
+	}
+	&__action {
+		text-align: right;
+	}
+	.form__remember {
+		margin-top: 14px;
+		font-family: 'exo2regular';
+	}
+	.btn {
+		float: right;
+	}
+}
+.big-field {
+	&.focus {
+		border-color: #4775b3;
+	}
+	&.has-error {
+		border-color: #EE4A58;
+		.help-block {
+			margin: 10px 0 0 0;
+		}
+		input {
+			&::-webkit-input-placeholder { color:#EE4A58;}
+			&::-moz-placeholder { color:#EE4A58; }
+			&:-ms-input-placeholder { color:#EE4A58; }
+			&:-moz-placeholder { color:#EE4A58; }
+		}
+	}
 }
 .user-pass {
 	font-size: 70px;
@@ -186,12 +213,21 @@
 	width: 600px;
 	margin: 0 auto;
 	padding-top: 83px;
+	h2 {
+		
+	}
 	.form {
 		padding-top: 42px;
 	}
 	.button {
-		text-align: right;
 		padding-top: 20px;
+		overflow: hidden;
+		.error-text {
+			float: left;
+		}
+		.btn {
+			float: right;
+		}
 	}
 }
 
@@ -234,7 +270,8 @@
 		color: #4775b3;
 		margin: 13px 0 27px;
 		input {
-			position: absolute; clip: rect(0,0,0,0)
+			position: absolute;
+			clip: rect(0,0,0,0);
 		}
 		&:hover {
 			color: #2f2f2f;
@@ -268,6 +305,7 @@
 .send-any {
 	float: right;
 	max-width: 440px;
+	width: 100%;
 	.download-pdf {
 		padding: 6px 0 32px;
 		span {
@@ -310,6 +348,7 @@
 		max-width: 840px;
 		width: 100%;
 		height: 200px;
+		margin-bottom: 18px;
 	}
 }
 
@@ -376,13 +415,6 @@
 }
 
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-	.container {
-		padding: 0 25px;
-	}
-}
-@media only screen 
 and (max-device-width : 768px) {
 	.header__title {
 		clear: both;
@@ -411,10 +443,25 @@ and (max-device-width : 768px) {
 			margin-top: 30px;
 		}
 	}
-
+	.form {
+		.has-error {
+			.help-block {
+				color: #EE4A58;
+				position: absolute;
+				margin: 0;
+				display: block;
+				bottom: 7px;
+			}
+		}
+	}
 }
+
+
 @media only screen 
 and (max-device-width : 1024px) {
+	.container {
+		padding: 0 25px;
+	}
 	.clients-list,
 	.broker-list {
 		thead {

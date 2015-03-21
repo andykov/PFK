@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>index.html</title>
+    <title>Просмотр заявки</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -25,7 +25,7 @@
 					<span class="manager">Менеджер Константинопольски К. К.</span>			
 				</div>
 				<div class="request__action clr">
-					<form class="form" action="">
+					<form class="form" action="#" method="POST">
 						<div class="select select--status">
 							<a href="javascript:void(0);" class="select__trigger ico-select">Изменить статус</a>
 							<ul class="select__drop">
@@ -94,9 +94,20 @@
 					</tbody>
 				</table>
 			</div>
+			<ul class="pagination">
+				<li class="previous disabled"><a class="previous disabled"><span>&lt;</span></a></li>
+				<li class="active"><a class="active">1</a></li>
+				<li><a rel="next" href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li class="disabled"><a>...</a></li>
+				<li><a href="#">10</a></li>
+				<li class="next"><a class="next" rel="next" href="#"><span>&gt;</span></a></li>
+			</ul>
 		</div>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/main.js"></script>
 </html>

@@ -50,12 +50,15 @@ h3 {
 	margin-bottom: 20px;
 }
 
-::-webkit-input-placeholder { color:#b4b4b4;}
-::-moz-placeholder { color:#b4b4b4; }
-:-ms-input-placeholder { color:#b4b4b4; }
-:-moz-placeholder { color:#b4b4b4; }
+::-webkit-input-placeholder { color:#B4B4B4;}
+::-moz-placeholder { color:#B4B4B4; }
+:-ms-input-placeholder { color:#B4B4B4; }
+:-moz-placeholder { color:#B4B4B4; }
 
 input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
 textarea {
 	color: #2f2f2f;
 	border: 1px solid #ccc;
@@ -68,6 +71,7 @@ input,
 textarea {
 	font-family: 'PTSansRegular';
 	border-radius: 4px;
+	outline: none;
 	box-sizing: border-box;
 	&:focus {
 		border-color: #4775b3;
@@ -78,6 +82,47 @@ textarea {
 	resize: none;
 	overflow: hidden;
 }
+
+/*** [STYLE FILE UPLOAD] ***/
+.fileupload {
+	margin-bottom: 20px;
+	&__button {
+		position: relative;
+		color: #4775b3;
+		cursor: pointer;
+		display: inline-block;
+		cursor: pointer;
+		input[type=file] {
+			position: absolute;
+			top: 0; 
+			left: 0;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			z-index: -1;
+		}
+		&:hover {
+			color: #2f2f2f;
+		}
+	}
+	&__items {
+		margin-bottom: 23px;
+	}
+	.file-item {
+		margin-right: 15px;
+	}
+	.file-remove {
+		background: url(../img/layout/sprite.png) no-repeat right top;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+}
+
 .clr:after {
 	content: '';
 	display: table;
@@ -191,6 +236,9 @@ textarea {
 }
 
 /*** [LOAD FILE] ***/
+.upload-file {
+	margin-bottom: 27px;
+}
 /*.load-file {
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05); 
 	border-radius: 2px;  
@@ -266,17 +314,26 @@ textarea {
 		}
 	}
 	&.ico-pdf {
-		position: relative;
 		padding-left: 58px;
 		&:before {
-			content: '';
-			background: url(../img/layout/sprite.png) no-repeat 0 -333px;
-			width: 33px;
-			height: 39px;
-			position: absolute;
 			left: 16px;
 			top: -10px;
+			margin: 0;
 		}
+	}
+}
+&.ico-pdf {
+	position: relative;
+	padding-left: 45px;
+	&:before {
+		content: '';
+		background: url(../img/layout/sprite.png) no-repeat 0 -333px;
+		width: 33px;
+		height: 39px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -19px;
 	}
 }
 .ico-view {

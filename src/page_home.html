@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Вход</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+	<meta charset="UTF-8">
+	<title>Вход</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div class="container">
@@ -15,18 +15,18 @@
 			<h2>Рабочий кабинет</h2>
 		</div>
 		<div class="form-auth">
-			<form class="form">
+			<form class="form" action="#" method="POST">
 				<div class="form-group form__row big-field">
 					<label>Логин</label>
-					<input id="inputEmail" class="user-name" name="email" type="email" placeholder="example@example.com">
+					<input type="email" class="user-name" name="email.login" placeholder="example@example.com">
 				</div>
 				<div class="form-group form__row big-field">
 					<label>Пароль</label>
-					<input id="inputPass" class="user-pass" name="pass" type="password">
+					<input type="password" class="user-pass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
 				</div>
 				<div class="button clr">
 					<div class="form-group form__remember">
-						<label class="checkbox"><input id="remember" class="login-remember" type="checkbox" name="remember">
+						<label class="checkbox"><input class="login-remember" type="checkbox" name="remember">
 						Запомнить меня</label>
 					</div>
 					<input class="btn btn--large" type="submit" value="Войти">
@@ -35,8 +35,8 @@
 		</div>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

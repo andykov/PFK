@@ -18,6 +18,7 @@ var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
         html: 'build/',
         js: 'build/js/',
+        jsVendor: 'build/js/vendor/',
         css: 'build/css/',
         img: 'build/img/',
         fonts: 'build/css/fonts/'
@@ -25,13 +26,15 @@ var path = {
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
+        jsVendor: 'src/js/vendor/*.js',//В стилях и скриптах нам понадобятся только main файлы
         style: 'src/scss/main.scss',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/scss/fonts/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
-        js: 'src/js/**/*.js',
+        js: 'src/js/*.js',
+        jsVendor: 'src/js/vendor/*.js',
         style: 'src/scss/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/scss/fonts/**/*.*'
@@ -75,6 +78,11 @@ gulp.task('js:build', function () {
         // .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(connect.reload()); //И перезагрузим сервер
+    
+    // Перебрасываем библиотеки
+    gulp.src(path.src.jsVendor)
+        .pipe(gulp.dest(path.build.jsVendor))
+        .pipe(connect.reload());
 });
 
 // Сборка IMG

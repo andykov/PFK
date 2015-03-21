@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Предложение по заявке</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+	<meta charset="UTF-8">
+	<title>Предложение по заявке</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div class="container">
@@ -16,8 +16,15 @@
 		<div class="content">
 			<h2 class="content__title">Ваше предложение по заявке Страхование жизни, №123456</h2>
 			<div class="add-offer">
-				<form action="" class="form">
-					<textarea name="" id="" placeholder="Текст предложения"></textarea>
+				<form class="form" action="#" method="POST">
+					<textarea name="text" placeholder="Текст предложения"></textarea>
+					<div class="fileupload">
+						<div class="fileupload__items">
+							<span class="file-item">Alfa.png<i class="file-remove"></i></span>
+							<span class="file-item">Alfa.png<i class="file-remove"></i></span>
+						</div>
+						<label class="fileupload__button">+ Добавить файл <input type="file" /></label>
+					</div>
 					<div class="button">
 						<input type="submit" class="btn btn--white" value="Добавить">
 					</div>
@@ -25,8 +32,9 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

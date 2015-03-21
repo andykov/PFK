@@ -26,25 +26,24 @@
 			</div>
 			<h2 class="content__title">Просмотр и редактирование брокера</h2>
 			<div class="edit-coworker">
-				<form class="form" action="">
-					<div class="form__row">
+				<form class="form" action="#" method="POST">
+					<div class="form-group form__row">
 						<label>Название организации</label>
-						<input type="text" name="name-org">
+						<input type="text" name="name.org" value="Иванов and СО">
 					</div>
-					<div class="form__row">
-						<label>ФИО</label>
-						<input type="text" name="name">
+					<div class="form-group form__row">
+						<label>E-mail</label>
+						<input type="email" name="email" value="vasily@gmail.com">
 					</div>
-					<div class="form__row">
+					<div class="form-group form__row">
 						<label>Контактное лицо</label>
-						<input type="text" name="persone">
+						<input type="text" name="person" value="Иванов Василий Семенович">
 					</div>
-					<!-- <div class="form__row"> -->
-						<div class="radio-group">
-							<label class="radio"><input type="radio">Менеджер активен - пользователь может пользоваться системой</label>
-							<label class="radio"><input type="radio">Менеджер заблокирован - пользователь не может пользоваться системой</label>
-						</div>
-					<!-- </div> -->
+					<div class="form-group radio-group">
+						<label class="radio"><input type="radio" name="radio1">Банки</label>
+						<label class="radio active"><input type="radio" name="radio2" checked>Страховые компании</label>
+						<label class="radio"><input type="radio" name="radio3">Микрокредитные организации</label>
+					</div>
 					<div class="form__action">
 						<input type="submit" class="btn btn--white" value="Сохранить">
 					</div>
@@ -54,6 +53,7 @@
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
