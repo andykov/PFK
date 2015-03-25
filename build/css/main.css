@@ -647,7 +647,8 @@ textarea {
 
 .table {
   border: 1px solid #d6d6d6;
-  border-radius: 5px; }
+  border-radius: 5px;
+  overflow: hidden; }
   .table .yes-reply:before {
     content: '';
     display: inline-block;

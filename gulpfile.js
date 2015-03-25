@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
+    plumber = require('gulp-plumber'),
     connect = require('gulp-connect'),
     opn = require('opn');
 
@@ -60,6 +61,7 @@ gulp.task('html:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
         // .pipe(sourcemaps.init()) //То же самое что и с js
+        .pipe(plumber())
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         // .pipe(cssmin()) //Сожмем
