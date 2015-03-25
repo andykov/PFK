@@ -125,6 +125,7 @@ gulp.task('watch', function() {
 // Поднимаем сервер
 gulp.task('webserver', function() {
     connect.server({
+        root: './build',
         host: server.host,
         port: server.port,
         livereload: true
@@ -139,7 +140,7 @@ gulp.task('clean', function (cb) {
 
 // Открываем проект в браузере
 gulp.task('openbrowser', function() {
-    opn( 'http://' + server.host + ':' + server.port + '/build' );
+    opn( 'http://' + server.host + ':' + server.port + '/' );
 });
 
 // Запускаем всю сборку одним таском

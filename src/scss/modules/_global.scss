@@ -239,37 +239,6 @@ textarea {
 .upload-file {
 	margin-bottom: 27px;
 }
-/*.load-file {
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05); 
-	border-radius: 2px;  
-	height: 30px;
-	display: inline-block;
-	overflow: hidden;
-	cursor: pointer;
-	&__button {
-		width: 100px;
-		line-height: 30px;
-		text-align: center;
-		background: #7300df;
-		border: 1px solid rgba(0,0,0,0.1);
-		color: #fff;
-		display: inline-block;
-		transition: background 0.2s;
-	}
-	&__input {
-		width: 300px;
-		display: inline-block;
-	}
-	input {
-		position: absolute; 
-		clip: rect(0,0,0,0);  
-	}
-	&:hover {
-		.button {
-			background: green;
-		}
-	}
-}*/
 
 /*** [BUTTONS] ***/
 .btn {
@@ -322,7 +291,7 @@ textarea {
 		}
 	}
 }
-&.ico-pdf {
+.ico-pdf {
 	position: relative;
 	padding-left: 45px;
 	&:before {
