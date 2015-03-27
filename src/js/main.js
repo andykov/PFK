@@ -1,5 +1,10 @@
 $(function() {
 
+	$('.datetimepicker').datetimepicker({
+		pickTime: false,
+		language:  'ru'
+	});
+
 	$('.big-field').find('input').on('focus',function(){
 		$('.big-field').removeClass('focus');
 		$(this).parent('.big-field').addClass('focus');

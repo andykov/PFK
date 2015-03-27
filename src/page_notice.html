@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Уведомления</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="header__logo">
+				<img src="img/pfk_logo.png" alt="">
+			</div>
+			<div class="header__buttons">
+				<a href="#" class="btn btn--yellow">Новая заявка</a>
+				<a href="#" class="btn btn--red">Выход</a>
+			</div>
+			<h1 class="header__title">Уведомления <span class="counter-notice">3</span></h1>
+		</div>
+		<div class="content">
+			<div class="notice">
+					<div class="notice__search">
+						<form class="form" action="#" method="POST">
+							<div class="form__row">
+								<label>Тип заявки</label>
+								<div class="select select--status">
+									<a href="javascript:void(0);" class="select__trigger ico-select">Банковский кредит</a>
+									<ul class="select__drop">
+										<li><a href="#">Микрокредит</a></li>
+										<li><a href="#">КАСКО</a></li>
+										<li><a href="#">ОСАГО</a></li>
+									</ul>
+									<input type="hidden" id="select" />
+								</div>
+							</div>
+							<div class="form__row">
+								<label>Поиск</label>
+								<input type="text" placeholder="по номеру">
+								<input type="text" placeholder="по ФИО отправителя">
+							</div>
+						</form>
+					</div>
+					<div class="notice__list">
+						<div class="notice__filter">
+							<form class="form" action="#" method="POST">
+								<ul class="filter">
+									<li><b>Фильтр</b></li>
+									<li class="filter__date">
+										<span>По дате:</span>
+										<div class="date " data-date="" data-date-format="dd MM yyyy" data-link-format="dd.MM.yyyy">
+											<label>c</label>
+											<input type="text" value="27.03.2015" class="datetimepicker form-control" readonly/>
+											<span class="ico-date"></span>
+										</div>
+										<div class="date " data-date="" data-date-format="dd MM yyyy" data-link-format="dd.MM.yyyy">
+											<label>по</label>
+											<input type="text" value="27.03.2015" class="datetimepicker form-control" readonly/>
+											<span class="ico-date"></span>
+										</div>
+									</li>
+									<li class="filter__status">
+										<label>По статусу:</label>
+										<div class="select select--status">
+											<a href="javascript:void(0);" class="select__trigger ico-select">Не отправлен</a>
+											<ul class="select__drop">
+												<li><a href="#">Отправлен</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="filter__manager">
+										<span>Менеджер:</span>
+										<a href="#" class="current">Я</a>
+										<a href="#">Все</a>
+									</li>
+								</ul>
+							</form>
+						</div>
+						<div class="table">
+							<table>
+								<thead>
+									<tr>
+										<td>Номер</td>
+										<td>Дата</td>
+										<td>ФИО</td>
+										<td>ДР</td>
+										<td>Предложения</td>
+										<td>Менеджер</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>13341</td>
+										<td>12.01.2015</td>
+										<td>Константинопольский Константин Константинович</td>
+										<td>1972</td>
+										<td>0/0</td>
+										<td>Константинопольский К.К.</td>
+									</tr>
+									<tr>
+										<td>13341</td>
+										<td>12.01.2015</td>
+										<td>Шило Евгения Петровна</td>
+										<td>1972</td>
+										<td>0/0</td>
+										<td>Иванов И.И.</td>
+									</tr>
+									<tr>
+										<td>13341</td>
+										<td>12.01.2015</td>
+										<td>Шило Евгения Петровна</td>
+										<td>1972</td>
+										<td>0/0</td>
+										<td>Иванов И.И.</td>
+									</tr>
+									<tr>
+										<td>13341</td>
+										<td>12.01.2015</td>
+										<td>Шило Евгения Петровна</td>
+										<td>1972</td>
+										<td>0/0</td>
+										<td>Иванов И.И.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="pagination">
+							<li class="previous disabled"><a class="previous disabled"><span>&lt;</span></a></li>
+							<li class="active"><a class="active">1</a></li>
+							<li><a rel="next" href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li class="disabled"><a>...</a></li>
+							<li><a href="#">10</a></li>
+							<li class="next"><a class="next" rel="next" href="#"><span>&gt;</span></a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/vendor/moment-with-locales.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="js/vendor/bootstrap-datetimepicker.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

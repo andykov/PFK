@@ -196,10 +196,6 @@
 			display: inline-block;
 			margin-left: 20px;
 		}
-		.current {
-			color: #2f2f2f;
-			font-weight: bold;
-		}
 	}
 	.table {
 		.ico-reject {
@@ -411,6 +407,67 @@
 	}
 	.form__action {
 		padding-left: 70px;
+	}
+}
+
+/*** [PAGE NOTICE] ***/
+.notice {
+	&__search {
+		.form__row {
+			margin-bottom: 25px;
+			label {
+				display: inline-block;
+				width: 95px;
+			}
+			input {
+				margin-right: 25px;
+			}
+		}
+	}
+	&__list {
+
+	}
+	&__filter {
+		padding-top: 10px;
+		.filter {
+			display: table;
+			width: 100%;
+		}
+		li {
+			display: table-cell;
+			&:first-child {
+				width: 100px;
+			}
+		}
+		.date {
+			display: inline-block;
+			position: relative;
+			margin-left: 18px;
+			input {
+				width: 124px;
+				margin-left: 10px;
+				padding: 10px 30px 6px 15px;
+				font-size: 14px;
+			}
+		}
+		.ico-date {
+			background: $sprite 0 -234px;
+			width: 18px;
+			height: 19px;
+			position: absolute;
+			top: 8px;
+			right: 12px;
+		}
+		.filter {
+			&__date {}
+			&__status {
+				/*padding-left: 35px;*/
+				label {
+					margin-right: 10px;
+				}
+			}
+			&__manager {}
+		}
 	}
 }
 
