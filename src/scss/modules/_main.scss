@@ -424,11 +424,8 @@
 			}
 		}
 	}
-	&__list {
-
-	}
 	&__filter {
-		padding-top: 10px;
+		padding: 10px 0 25px;
 		.filter {
 			display: table;
 			width: 100%;
@@ -441,13 +438,20 @@
 		}
 		.date {
 			display: inline-block;
+			vertical-align: middle;
 			position: relative;
 			margin-left: 18px;
+			label,
+			input {
+				display: inline-block;
+				vertical-align: middle;
+			}
 			input {
 				width: 124px;
 				margin-left: 10px;
 				padding: 10px 30px 6px 15px;
 				font-size: 14px;
+				margin-bottom: 0;
 			}
 		}
 		.ico-date {
@@ -459,20 +463,21 @@
 			right: 12px;
 		}
 		.filter {
-			&__date {}
 			&__status {
-				/*padding-left: 35px;*/
 				label {
 					margin-right: 10px;
 				}
 			}
-			&__manager {}
+			&__manager {
+				a {
+					margin: 0 10px;
+				}
+			}
 		}
 	}
 }
 
-@media only screen 
-and (max-device-width : 768px) {
+@media only screen and (max-width : 768px) {
 	.header__title {
 		clear: both;
 		margin-left: 0;
@@ -514,8 +519,7 @@ and (max-device-width : 768px) {
 }
 
 
-@media only screen 
-and (max-device-width : 1024px) {
+@media only screen and (max-width : 1024px) {
 	.container {
 		padding: 0 25px;
 	}
@@ -545,6 +549,34 @@ and (max-device-width : 1024px) {
 		thead {
 			td:last-child {
 				width: 320px;
+			}
+		}
+	}
+	.notice {
+		&__filter {
+			li {
+				display: inline-block;
+			}
+			li:first-child {
+				width: 60px;
+			}
+			.date {
+				margin-left: 10px;
+			}
+			.filter__status {
+				padding-left: 20px;
+				.select {
+					width: 170px;
+				}
+				.select--status {
+					margin-right: 0;
+				}
+			}
+			.filter__manager {
+				a {
+					display: inline-block;
+					margin-top: 20px;
+				}
 			}
 		}
 	}

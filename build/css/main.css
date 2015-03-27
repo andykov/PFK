@@ -1107,7 +1107,7 @@ table {
   .notice__search .form__row input {
     margin-right: 25px; }
 .notice__filter {
-  padding-top: 10px; }
+  padding: 10px 0 25px; }
   .notice__filter .filter {
     display: table;
     width: 100%; }
@@ -1117,13 +1117,18 @@ table {
       width: 100px; }
   .notice__filter .date {
     display: inline-block;
+    vertical-align: middle;
     position: relative;
     margin-left: 18px; }
+    .notice__filter .date label, .notice__filter .date input {
+      display: inline-block;
+      vertical-align: middle; }
     .notice__filter .date input {
       width: 124px;
       margin-left: 10px;
       padding: 10px 30px 6px 15px;
-      font-size: 14px; }
+      font-size: 14px;
+      margin-bottom: 0; }
   .notice__filter .ico-date {
     background: url('../img/layout/sprite.png') 0 -234px;
     width: 18px;
@@ -1131,12 +1136,12 @@ table {
     position: absolute;
     top: 8px;
     right: 12px; }
-  .notice__filter .filter__status {
-    /*padding-left: 35px;*/ }
-    .notice__filter .filter__status label {
-      margin-right: 10px; }
+  .notice__filter .filter__status label {
+    margin-right: 10px; }
+  .notice__filter .filter__manager a {
+    margin: 0 10px; }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 768px) {
   .header__title {
     clear: both;
     margin-left: 0;
@@ -1161,7 +1166,7 @@ table {
     display: block;
     bottom: 7px; } }
 
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .container {
     padding: 0 25px; }
   .clients-list thead td:last-child, .broker-list thead td:last-child {
@@ -1172,7 +1177,22 @@ table {
     display: inline-block;
     /*margin: 0 0 10px 0;*/ }
   .reply thead td:last-child {
-    width: 320px; } }
+    width: 320px; }
+  .notice__filter li {
+    display: inline-block; }
+  .notice__filter li:first-child {
+    width: 60px; }
+  .notice__filter .date {
+    margin-left: 10px; }
+  .notice__filter .filter__status {
+    padding-left: 20px; }
+    .notice__filter .filter__status .select {
+      width: 170px; }
+    .notice__filter .filter__status .select--status {
+      margin-right: 0; }
+  .notice__filter .filter__manager a {
+    display: inline-block;
+    margin-top: 20px; } }
 
 .glyphicon {
   position: relative;
