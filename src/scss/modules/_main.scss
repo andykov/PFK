@@ -1,4 +1,21 @@
 .form {
+	&__row {
+		/*width: 100%;*/
+		margin-bottom: 25px;
+		.col-l,
+		.col-r {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.col-l {
+			width: 180px;
+			padding-top: 8px;
+		}
+		.col-r {
+			width: 440px;
+			position: relative;
+		}
+	}
 	.big-field {
 		border-bottom: 2px solid #ccc;
 		label {
@@ -39,7 +56,8 @@
 	}
 	.has-error {
 		position: relative;
-		input {
+		input,
+		textarea {
 			border-color: #EE4A58;
 		}
 		.help-block {
@@ -52,7 +70,7 @@
 		float: left;
 	}
 }
-/*** [FORM AUTORIZATION] ***/
+/*** [#FORM AUTORIZATION] ***/
 .form-auth {
 	width: 600px;
 	margin: 0 auto;
@@ -94,7 +112,72 @@
 	letter-spacing: 22px;
 }
 
-/*** [PAGE PRODUCTS] ***/
+/*** [#PAGE DATAFORM] ***/
+.data-form {
+	h2 {
+		font-family: 'exo2extra_light';
+		line-height: 34px;
+	}
+	.fieldset {}
+	.education,
+	.soc-status,
+	.marital-status {
+		.select {
+			width: 100%;
+		}
+	}
+	.numchild,
+	.dependents {
+		.select {
+			width: 75px;
+		}
+	}
+	input[name="name.old"] {
+		width: 240px;
+		margin-left: 47px;
+	}
+	input[name="subdivision"],
+	input[name="house"],
+	input[name="apartment"],
+	input[name="housing"] {
+		width: 125px;
+	}
+	input[name="snils"] {
+		width: 255px;
+	}
+	input[name="phone.region"],
+	input[name="phone.number"] {
+		margin: 0 5px;
+	}
+	input[name="phone.region"] {
+		width: 75px;
+		
+	}
+	input[name="phone.number"] {
+		width: 155px;
+	}
+	.has-success {
+		.bulit-success {
+			display: block;
+			width: 17px;
+			height: 17px;
+			background-color: #f9ab5a;
+			border-radius: 17px;
+			position: absolute;
+			right: -35px;
+			top: 9px;
+		}
+	}
+	.select__drop {
+		text-align: center;
+		li {
+			padding: 5px 10px;
+		}
+	}
+}
+
+
+/*** [#PAGE PRODUCTS] ***/
 .products {
 	&__list {
 		float: left;
@@ -137,21 +220,21 @@
 		border: 0;
 	}
 }
-/*** [PAGE LIST CLIENT] ***/
+/*** [#PAGE LIST CLIENT] ***/
 .clients-list {
 	h2 {
 		margin-bottom: 18px;
 	}
 }
 
-/*** [PAGE LIST BROKER] ***/
+/*** [#PAGE LIST BROKER] ***/
 .broker-list {
 	.table {
 		margin-top: 25px;
 	}
 }
 
-/*** [PAGE VIEW APPLICATION] ***/
+/*** [#PAGE VIEW APPLICATION] ***/
 .select	{
 	&--status {
 		margin-right: 10px;
@@ -204,7 +287,7 @@
 	}
 }
 
-/*** [PAGE SEND OFFER] ***/
+/*** [#PAGE SEND OFFER] ***/
 .send-offer {
 	width: 600px;
 	margin: 0 auto;
@@ -227,15 +310,17 @@
 	}
 }
 
-/*** [PAGES BANK CREDIT] ***/
+/*** [#PAGES BANK CREDIT] ***/
 .bank-credit {
 		padding-top: 10px;
+		max-width: 810px;
 	h3 {
 		font-family: 'exo2regular';
 		font-size: 20px;
 	}
 	&--index {
-		max-width: 745px;
+		/*max-width: 745px;*/
+		
 		.buttons {
 			padding-top: 60px;
 		}
@@ -321,7 +406,7 @@
 	}
 }
 
-/*** [PAGE MESSAGE] ***/
+/*** [#PAGE MESSAGE] ***/
 .message {
 	padding-top: 50px;
 	font-family: 'exo2regular';
@@ -338,7 +423,7 @@
 	}
 }
 
-/*** [PAGE ADD OFFER] ***/
+/*** [#PAGE ADD OFFER] ***/
 .add-offer {
 	textarea {
 		max-width: 840px;
@@ -348,12 +433,12 @@
 	}
 }
 
-/*** [PAGE ADMINISTRATOR] ***/
+/*** [#PAGE ADMINISTRATOR] ***/
 .list-partner {
 	padding-top: 25px;
 }
 
-/*** [PAGE ADD PARTNER] and [PAGE ADD BROKER] and [PAGE ADD COWORKER]***/
+/*** [#PAGE ADD PARTNER] and [PAGE ADD BROKER] and [PAGE ADD COWORKER]***/
 .link-list-partner {
 	font-family: 'exo2medium';
 	font-size: 20px;
@@ -410,57 +495,25 @@
 	}
 }
 
-/*** [PAGE NOTICE] ***/
+/*** [#PAGE NOTICE] ***/
 .notice {
-	&__search {
-		.form__row {
-			margin-bottom: 25px;
-			label {
-				display: inline-block;
-				width: 95px;
-			}
-			input {
-				margin-right: 25px;
-			}
-		}
-	}
 	&__filter {
 		padding: 10px 0 25px;
 		.filter {
 			display: table;
 			width: 100%;
-		}
-		li {
-			display: table-cell;
-			&:first-child {
-				width: 100px;
+			> li {
+				display: table-cell;
+				&:first-child {
+					width: 100px;
+				}
 			}
 		}
 		.date {
-			display: inline-block;
-			vertical-align: middle;
-			position: relative;
 			margin-left: 18px;
-			label,
 			input {
-				display: inline-block;
-				vertical-align: middle;
-			}
-			input {
-				width: 124px;
 				margin-left: 10px;
-				padding: 10px 30px 6px 15px;
-				font-size: 14px;
-				margin-bottom: 0;
 			}
-		}
-		.ico-date {
-			background: $sprite 0 -234px;
-			width: 18px;
-			height: 19px;
-			position: absolute;
-			top: 8px;
-			right: 12px;
 		}
 		.filter {
 			&__status {
@@ -554,11 +607,13 @@
 	}
 	.notice {
 		&__filter {
-			li {
-				display: inline-block;
-			}
-			li:first-child {
-				width: 60px;
+			.filter {
+				li {
+					display: inline-block;
+				}
+				li:first-child {
+					width: 60px;
+				}
 			}
 			.date {
 				margin-left: 10px;

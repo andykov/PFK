@@ -60,12 +60,18 @@ input[type="email"],
 input[type="password"],
 input[type="tel"],
 textarea {
+	max-width: 440px;
+	width: 100%;
 	color: #2f2f2f;
 	border: 1px solid #ccc;
 	padding: 9px 15px;
-	margin-bottom: 25px;
+	/*margin-bottom: 25px;*/
 	font-size: 15px;
 	line-height: 17px;
+	&:disabled {
+		background-color: #f9f9f9;
+		border-color: #e4e4e4;
+	}
 }
 input,
 textarea {
@@ -79,8 +85,11 @@ textarea {
 	}
 }
 textarea {
+	max-width: 440px;
+	width: 100%;
+	min-height: 90px;
 	resize: none;
-	overflow: hidden;
+	overflow-x: auto;
 }
 
 /*** [STYLE FILE UPLOAD] ***/
@@ -294,6 +303,15 @@ textarea {
 		}
 	}
 }
+.ico-date {
+	background: $sprite 0 -234px;
+	width: 18px;
+	height: 19px;
+	position: absolute;
+	top: 8px;
+	right: 12px;
+	pointer-events: none;
+}
 .ico-pdf {
 	position: relative;
 	padding-left: 45px;
@@ -399,6 +417,7 @@ table {
 		border: 1px solid #ccc;
 		background-color: #fff;
 		width: 100%;
+		min-height: 34px;
 		padding: 4px 15px 6px 10px;
 		color: #3e3e3e;
 		border-radius: 4px;
@@ -420,6 +439,7 @@ table {
 		border-radius: 4px;
 		box-shadow: 0 18px 18px rgba(0,0,0,0.15);
 		box-sizing: border-box;
+		z-index: 2;
 		li {
 			list-style: none;
 			border-top: 1px solid #ccc;
@@ -436,6 +456,9 @@ table {
 				background-color: #e5e5e5;
 				color: #222;
 			}
+			&:first-child {
+				border-top: 0;
+			}
 		}
 	}
 	.ico-select {
@@ -449,6 +472,22 @@ table {
 			width: 8px;
 			height: 16px;
 		}
+	}
+}
+.date {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	label,
+	input {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	input {
+		width: 124px;
+		padding: 10px 30px 6px 15px;
+		font-size: 14px;
+		margin-bottom: 0;
 	}
 }
 .spoiler-trigger {

@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Уведомления</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -21,53 +20,52 @@
 			<h1 class="header__title">Уведомления <span class="counter-notice">3</span></h1>
 		</div>
 		<div class="content">
+		<div id="response"></div>
 			<div class="notice">
-					<div class="notice__search">
-						<form class="form" action="#" method="POST">
-							<div class="form__row">
-								<label>Тип заявки</label>
-								<div class="select select--status">
-									<a href="javascript:void(0);" class="select__trigger ico-select">Банковский кредит</a>
-									<ul class="select__drop">
-										<li><a href="#">Микрокредит</a></li>
-										<li><a href="#">КАСКО</a></li>
-										<li><a href="#">ОСАГО</a></li>
-									</ul>
-									<input type="hidden" id="select" />
-								</div>
-							</div>
-							<div class="form__row">
-								<label>Поиск</label>
-								<input type="text" placeholder="по номеру">
-								<input type="text" placeholder="по ФИО отправителя">
-							</div>
-						</form>
-					</div>
-					<div class="notice__list">
 						<div class="notice__filter">
-							<form class="form" action="#" method="POST">
+							<form id="noticeFilter" class="form" action="page_home.html" method="post">
+								<div class="form__row">
+									<label>Тип заявки</label>
+									<div class="select">
+										<a href="javascript:void(0);" class="select__trigger ico-select">Выбрать</a>
+										<ul class="select__drop">
+											<li><a href="#">Банковский кредит</a></li>
+											<li><a href="#">Микрокредит</a></li>
+											<li><a href="#">КАСКО</a></li>
+											<li><a href="#">ОСАГО</a></li>
+										</ul>
+										<input type="hidden" id="selectType1" value="" />
+									</div>
+								</div>
+								<div class="form__row">
+									<label>Поиск</label>
+									<input type="text" id="searchNumber" name="searchnumber" placeholder="по номеру">
+									<input type="text" id="searchName" name="searchname" placeholder="по ФИО отправителя">
+								</div>
 								<ul class="filter">
 									<li><b>Фильтр</b></li>
 									<li class="filter__date">
 										<span>По дате:</span>
-										<div class="date " data-date="" data-date-format="dd MM yyyy" data-link-format="dd.MM.yyyy">
+										<div class="date form-group">
 											<label>c</label>
-											<input type="text" value="27.03.2015" class="datetimepicker form-control" readonly/>
+											<input type="text" name="date" value="" placeholder="27.03.2015" class="datetimepicker form-control"/>
 											<span class="ico-date"></span>
 										</div>
-										<div class="date " data-date="" data-date-format="dd MM yyyy" data-link-format="dd.MM.yyyy">
+										<div class="date form-group">
 											<label>по</label>
-											<input type="text" value="27.03.2015" class="datetimepicker form-control" readonly/>
+											<input type="text" name="date" value=""placeholder="27.03.2015" class="datetimepicker form-control"/>
 											<span class="ico-date"></span>
 										</div>
 									</li>
 									<li class="filter__status">
 										<label>По статусу:</label>
-										<div class="select select--status">
-											<a href="javascript:void(0);" class="select__trigger ico-select">Не отправлен</a>
+										<div class="select">
+											<a href="javascript:void(0);" class="select__trigger ico-select">Выбрать</a>
 											<ul class="select__drop">
+												<li><a href="#">Не отправлен</a></li>
 												<li><a href="#">Отправлен</a></li>
 											</ul>
+											<input type="hidden" id="selectStatus" value="Банковский кредит" />
 										</div>
 									</li>
 									<li class="filter__manager">
@@ -76,8 +74,10 @@
 										<a href="#">Все</a>
 									</li>
 								</ul>
+								<!-- <input type="submit" value="111"> -->
 							</form>
 						</div>
+
 						<div class="table">
 							<table>
 								<thead>
@@ -135,16 +135,17 @@
 							<li><a href="#">10</a></li>
 							<li class="next"><a class="next" rel="next" href="#"><span>&gt;</span></a></li>
 						</ul>
-					</div>
 			</div>
 		</div>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="js/vendor/moment-with-locales.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="js/vendor/bootstrap-datetimepicker.min.js"></script>
+	<script src="js/vendor/bootstrap-datepicker.min.js"></script>
+	<script src="js/vendor/bootstrap-datepicker.ru.min.js"></script>
 	<script src="js/vendor/bootstrapValidator.min.js"></script>
+	<script src="js/vendor/jquery.mask.min.js"></script>
+	<script src="js/vendor/select2.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

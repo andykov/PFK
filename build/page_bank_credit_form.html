@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Банковский кредит - форма</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="header__logo">
+				<img src="img/pfk_logo.png" alt="">
+			</div>
+			<div class="header__buttons">
+				<a href="#" class="btn btn--yellow">Новая заявка</a>
+				<a href="#" class="btn btn--notice"><span class="counter-notice">3</span>Уведомления</a>
+				<a href="#" class="btn btn--red">Выход</a>
+			</div>
+		</div>
+		<div class="content">
+			<h2 class="content__title">Банковский кредит</h2>
+			<div class="bank-credit">
+				<p>Вы можете заполнить он-лайн заявку на получение кредита прямо сейчас. Заявка поступит на рассмотрение специалистам по кредитованию, в течении двух ближайших рабочих дней они свяжутся с Вами для обсуждения условий договора, а также проконсультируют по процедуре его оформления.</p>
+				<div class="data-form">
+					<form action="#" class="form">
+						<h2>Банковский кредит</h2>
+						<div class="fieldset">
+							<div class="form__row birthday">
+								<span class="col-l">Дата рождения*</span>
+								<div class="col-r form-group">
+									<div class="date">
+										<input type="text" name="date" value="" placeholder="27.03.2015" class="datetimepicker form-control"/>
+										<span class="ico-date"></span>
+									</div>
+								</div>
+
+							</div>
+							<div class="form__row form-group place">
+								<span class="col-l">Место рождения*</span>
+								<div class="col-r">
+									<input type="text" name="place">
+								</div>
+							</div>
+							<div class="form__row form-group oldname">
+								<span class="col-l">Прежняя фамилия*</span>
+								<div class="col-r">
+									<label class="checkbox">
+										<input type="checkbox" name="checkbox" value="a1">
+										Изменял фамилию
+									</label>
+									<input type="text" name="name.old" disabled>
+								</div>
+							</div>
+							<div class="form__row form-group passport">
+								<span class="col-l">Паспорт*</span>
+								<div class="col-r ">
+									<input class="form-control" type="text" name="passport">
+								</div>
+							</div>
+							<div class="form__row form-group date-issued">
+								<span class="col-l">Дата выдачи*</span>
+								<div class="col-r">
+									<div class="date">
+										<input type="text" name="date" value="" placeholder="27.03.2015" class="datetimepicker form-control"/>
+										<span class="ico-date"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form__row form-group issued">
+								<span class="col-l">Кем выдан*</span>
+								<div class="col-r">
+									<textarea name="issued"></textarea>
+								</div>
+							</div>
+							<div class="form__row form-group subdivision">
+								<span class="col-l">Код подразделения*</span>
+								<div class="col-r form-group">
+									<input type="text" name="subdivision">
+								</div>
+							</div>
+							<div class="form__row form-group gender">
+								<span class="col-l">Пол*</span>
+								<div class="col-r">
+									<label class="radio active">
+										<input type="radio" name="gender" checked="checked">
+										Мужской
+									</label>
+									<label class="radio">
+										<input type="radio" name="gender">
+										Женский
+									</label>
+								</div>
+							</div>
+						</div>
+						<h2>Данные о Страховом свидетельстве государственного пенсионного страхования</h2>
+						<div class="fieldset">
+							<div class="form__row form-group snils">
+								<span class="col-l">№ СНИЛС</span>
+								<div class="col-r">
+									<input type="text" name="snils">
+									<label class="checkbox">
+										<input type="checkbox" name="check.req">
+										Я соглашаюсь с уловиями обработки данных из Пенсионного фонда РФ
+									</label>								
+								</div>
+							</div>
+						</div>
+						<h2>Социальный статус</h2>
+						<div class="fieldset">
+							<div class="form__row form-group education">
+								<span class="col-l">Образование*</span>
+								<div class="col-r">
+									<div class="select">
+										<a href="javascript:void(0);" class="select__trigger ico-select">Выбрать</a>
+										<ul class="select__drop">
+											<li><a href="#">Незаконченное высшее</a></li>
+											<li><a href="#">Высшее</a></li>
+										</ul>
+										<input type="hidden" id="selectStatus" value="Банковский кредит" />
+									</div>
+									<label class="checkbox">
+										<input type="checkbox" name="check">
+										Я соглашаюсь с уловиями обработки данных из Пенсионного фонда РФ
+									</label>
+								</div>
+							</div>
+							<div class="form__row soc-status">
+								<span class="col-l">Социальный статус*</span>
+								<div class="col-r form-group">
+									<div class="select">
+										<a href="javascript:void(0);" class="select__trigger ico-select">Выбрать</a>
+										<ul class="select__drop">
+											<li><a href="#">Рабочий/служащий по найму</a></li>
+											<li><a href="#">Руководитель</a></li>
+										</ul>
+										<input type="hidden" id="selectStatus" value="Банковский кредит" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<h2>Данные о семье</h2>
+						<div class="fieldset">
+							<div class="form__row form-group marital-status">
+								<span class="col-l">Семейное положение*</span>
+								<div class="col-r">
+									<div class="select">
+										<a href="javascript:void(0);" class="select__trigger ico-select">Выбрать</a>
+										<ul class="select__drop">
+											<li><a href="#">Женат/Замужем</a></li>
+											<li><a href="#">Холост</a></li>
+										</ul>
+										<input type="hidden" id="selectStatus" value="Банковский кредит" />
+									</div>
+									<label>
+										<input type="checkbox" name="check">
+										Учащийся/студент в настоящее время
+									</label>
+								</div>
+							</div>
+							<div class="form__row form-group income">
+								<span class="col-l">Ежемесячный доход<br>супруга/супруги*</span>
+								<div class="col-r">
+									<input type="text" name="income">
+									<label class="checkbox">
+										<input type="checkbox" name="check">
+										Есть дети и/или иждевенцы на попечении
+									</label>
+								</div>
+							</div>
+							<div class="form__row form-group numchild">
+								<span class="col-l">Кол-во детей до 18 лет*</span>
+								<div class="col-r">
+									<div class="select">
+										<a href="javascript:void(0);" class="select__trigger ico-select"></a>
+										<ul class="select__drop">
+											<li><a href="#">0</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+										</ul>
+										<input type="hidden" id="selectStatus" value="Банковский кредит" />
+									</div>
+								</div>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Д.р.1-го ребенка*</span>
+								<div class="col-r">
+									<div class="date">
+										<input type="text" name="date" value="" placeholder="27.03.2015" class="datetimepicker form-control"/>
+										<span class="ico-date"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Д.р.2-го ребенка*</span>
+								<div class="col-r">
+									<div class="date">
+										<input type="text" name="date" value="" placeholder="27.03.2015" class="datetimepicker form-control"/>
+										<span class="ico-date"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Д.р.3-го ребенка*</span>
+								<div class="col-r">
+									<div class="date">
+										<input type="text" name="date" value="" placeholder="27.03.2015" class="datetimepicker form-control"/>
+										<span class="ico-date"></span>
+									</div>
+								</div>
+							</div>
+							<div class="form__row form-group dependents">
+								<span class="col-l">Другие иждевенцы</span>
+								<div class="col-r">
+									<div class="select">
+										<a href="javascript:void(0);" class="select__trigger ico-select"></a>
+										<ul class="select__drop">
+											<li><a href="#">0</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+										</ul>
+										<input type="hidden" id="selectStatus" value="Банковский кредит" />
+									</div>
+									чел.
+								</div>
+							</div>
+						</div>
+						<div class="fieldset">
+							<div class="form__row form-group">
+								<span class="col-l">Населенный пункт*</span>
+								<div class="col-r">
+									<input type="text" name="locality">
+								</div>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Улица*</span>
+								<div class="col-r">
+									<input type="text" name="street">
+								</div>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Дом*</span>
+								<div class="col-r">
+									<input type="text" name="house">
+								</div>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Квартира*</span>
+								<div class="col-r">
+									<input type="text" name="apartment">
+								</div>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Корпус/строение</span>
+								<div class="col-r">
+									<input type="text" name="housing">
+								</div>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Дата регистрации*</span>
+								<div class="col-r">
+									<div class="date">
+										<input type="text" name="date" value="" placeholder="27.03.2015" class="datetimepicker form-control"/>
+										<span class="ico-date"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="fieldset">
+							<div class="form__row form-group">
+								<label class="checkbox">
+									<input type="checkbox" name="check">
+									Совпадает с адресом регистрации
+								</label>
+							</div>
+							<div class="form__row form-group">
+								<span class="col-l">Статус владения*</span>
+								<div class="col-r">
+									<div class="select">
+										<a href="javascript:void(0);" class="select__trigger ico-select">Выбрать</a>
+										<ul class="select__drop">
+											<li><a href="#">Собственник</a></li>
+											<li><a href="#">Арендатор</a></li>
+										</ul>
+										<input type="hidden" id="selectStatus" value="Банковский кредит" />
+									</div>
+								</div>
+							</div>
+							<div class="form__row form-group phone">
+								<span class="col-l">Домашний телефон*</span>
+								<div class="col-r">
+									<span>+7</span>
+									<input type="text" maxlength="3" name="phone.region">
+									<span>-</span>
+									<input type="text" maxlength="7" name="phone.number">
+								</div>
+							</div>
+						</div>
+						<input class="btn btn--white" type="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="js/vendor/bootstrap-datepicker.min.js"></script>
+	<script src="js/vendor/bootstrap-datepicker.ru.min.js"></script>
+	<script src="js/vendor/bootstrapValidator.min.js"></script>
+	<script src="js/vendor/jquery.mask.min.js"></script>
+	<script src="js/vendor/select2.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
